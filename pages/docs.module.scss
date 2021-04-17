@@ -1,0 +1,54 @@
+@import "../styles/colors.scss";
+@import "../styles/fontStyles.scss";
+.pageLayout {
+    margin-left: 200px;
+    padding-top: 40px;
+}
+
+.mainLayout {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 20px;
+    color: $blackBright;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.brand {
+    width: 25px;
+}
+
+//=========================
+.content {
+    line-height: 1.6;
+    margin-top: 15px;
+    a {
+        color: $blueViolet;
+        text-decoration: underline;
+    }
+}
+
+// edit page banner ========================
+.editPageContainer {
+    display: inline-block;
+}
+
+.editPage {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    color: $blueViolet;
+}
+
+.editPageIcon {
+    width: 20px;
+    margin-left: 5px;
+}

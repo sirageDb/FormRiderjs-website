@@ -1,0 +1,159 @@
+@import "../styles/colors.scss";
+@import "../styles/fontStyles.scss";
+// TOP BANNER ======================================================================================
+.topBannerContainer {
+    background-color: $blueViolet;
+    height: 260px;
+}
+
+.topBanner {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.topBannerButtonsContainer {
+    margin-top: 20px;
+}
+
+.topBannerBrand {
+    width: 128px;
+}
+
+.topBannerText {
+    color: $whiteBright;
+    font-size: $fontSizeBig;
+    font-weight: bold;
+}
+
+.topBannerButton {
+    display: inline-block;
+    font-size: $fontSizeMedium;
+    padding: 2.5px 28.5px;
+    border: 3px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    &.topBannerButton:first-child {
+        background-color: $green;
+        color: $whiteBright;
+        margin-right: 30px;
+        &:hover {
+            background-color: $blueViolet;
+        }
+    }
+    &.topBannerButton:last-child {
+        background-color: $whiteBright;
+        color: $blackDark;
+        &:hover {
+            background-color: $blueViolet;
+        }
+    }
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+}
+
+// why using ======================================================================================
+.whyUsingTitle {
+    text-align: center;
+    font-size: $fontSizeMedium;
+    font-weight: bold;
+    color: $blackBright;
+    margin-top: 40px;
+}
+
+.whyRowContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    &.whyRowContainer:last-child {
+        margin-top: 40px;
+    }
+}
+
+// Example 1 ======================================================================================
+.example1Container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.example1LeftContainer {
+    width: 450px;
+    color: $blackNoraml;
+}
+
+.example1LeftContainerTitle {
+    display: inline-block;
+    padding: 2px 30px 4px 0;
+    margin-bottom: 20px;
+    color: $whiteBright;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #50CF96, #4568DC);
+}
+
+.example1LeftContainerLink {
+    color: $blueBright;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.example1Form {
+    margin-top: 20px;
+}
+
+.example1RightContainer {
+    width: 500px;
+}
+
+.example1TextAreaContainer {
+    background-color: #041126;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.example1TextArea {
+    padding: 10px;
+    width: 100%;
+    height: 420px;
+    font-size: $fontSizeSmall;
+    overflow: auto;
+    color: $whiteBright;
+}
+
+.code {
+    white-space: pre;
+    background-color: #041126;
+    font-size: $fontSizeSmall;
+}
+
+.propertyKey {
+    color: $blueBright;
+}
+
+.propertyValueText {
+    color: $green;
+}
+
+.propertyValueNotText {
+    color: $yellowDark
+}
+
+.ponctuation {
+    color: $whiteDark
+}
