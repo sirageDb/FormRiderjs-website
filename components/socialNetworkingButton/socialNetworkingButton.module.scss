@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+.buttonContainer {
+    background-color: $whiteNormal;
+    color: $blackDark;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    &:hover {
+        box-shadow: $whiteDark 0px 0px 8px;
+    }
+}
+
+.socialNetworkingIcon {
+    width: 20px;
+    margin-right: 5px;
+    padding-top: 3px;
+}
+
+.socialNetworkingButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 1px 10px;
+}

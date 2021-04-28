@@ -66,13 +66,7 @@ function SideNav(props) {
             </div>
           </div>
         </Link>
-        <Link href={`/docs/installation`}>
-          <div idslug={"installation"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Installation</div>
-            </div>
-          </div>
-        </Link>
+
         <Link href={`/docs/getting-started`}>
           <div idslug={"getting-started"} className={styles.title}>
             <div className={styles.titleContainer}>
@@ -80,6 +74,15 @@ function SideNav(props) {
             </div>
           </div>
         </Link>
+        
+        <Link href={`/docs/installation`}>
+          <div idslug={"installation"} className={styles.title}>
+            <div className={styles.titleContainer}>
+              <div>Installation</div>
+            </div>
+          </div>
+        </Link>
+
 
         <Link href={`/docs/understanding-configurations-and-main-concepts`}>
           <div

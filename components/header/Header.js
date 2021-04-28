@@ -36,7 +36,7 @@ export default function Header() {
           </Link>
           <div className={styles.version}>v1.0.0-Beta</div>
           <div className={styles.headerGithubIcon}>
-            <a href="https://github.com/formRiderjs/formRiderjs" target="_blank">
+            <a href="https://github.com/sirageDb/FormRiderjs" target="_blank">
               <img
                 className={styles.headerIcon}
                 src="/github.svg"
@@ -45,10 +45,10 @@ export default function Header() {
             </a>
           </div>
           <div>
-            <a href="https://ilovesemicolons.io" target="_blank">
+            <a href="https://discord.gg/4SbzkHrm" target="_blank">
               <img
                 className={styles.headerIcon}
-                src="/slack.svg"
+                src="/discord.svg"
                 alt="slack link to Form Rider community"
               ></img>
             </a>

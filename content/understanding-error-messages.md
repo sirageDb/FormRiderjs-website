@@ -6,7 +6,12 @@ description : is out error messages
 
 ---
 
-You might get encountered to some errors during the implementation of Form Rider in your website, in case you are unable to resolve it or the error is not listed here, don’t hesitate to post an issue on Form Rider [Github issues](https://github.com/FormRiderjs/FormRiderjs/issues) or on the dedicated [Slack channel](https://formriderjs.slack.com/)
+### Issues
+An issue is there ?, describe it on the FormRider [Discord Server](https://discord.gg/4SbzkHrm) in issues channel or go directly in Github sections in :
+
+* if you are using the standard library GO TO [FormRiderjs-standard issues](https://github.com/sirageDb/FormRiderjs/issues)
+* if you are using the npm edition GO TO [FormRiderjs-npm issues ](https://github.com/sirageDb/formriderjs-npm/issues)
+
 
 ---
 

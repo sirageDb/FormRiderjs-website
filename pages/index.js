@@ -23,12 +23,10 @@ export default function Home() {
                 A Javascript form validation plugin, based on JSON
               </div>
             </div>
-            <div>
               <div className={styles.topBannerButtonsContainer}>
-                <Link href={"/docs/introduction"} ><div className={styles.topBannerButton}>Get Started</div></Link>
-                <div className={styles.topBannerButton}>Download</div>
+                <Link href={"/docs/introduction"} ><div className={styles.topBannerButton + " " + styles.gettingStartedButton}>Get Started</div></Link>
+                <a href={"/FormRiderjs.zip"} download><div className={styles.topBannerButton + " " + styles.downloadButton}>Download</div></a> <span style={{color : "#ffffff"}}>or</span> <span className={styles.npmInstall}><span style={{color: "#FFAF26"}}>$</span> npm -i formriderjs</span>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -70,13 +68,13 @@ export default function Home() {
           <SingleWhy
             reason={"Open Source"}
             explanation={
-              "Join the Slakc channel, give new ideas or code it your self, feel free to add new notification designs to the library ! :)"
+              "Join the Discord channel, give new ideas or code it your self, feel free to add new notification designs to the library ! :)"
             }
             reasonBarColor={"#4D4D4D"}
           />
           <SingleWhy
             reason={"Automatic Code Loading"}
-            explanation={"Form Rider size is only 128kb."}
+            explanation={"Form Rider size is only 193kb."}
             reasonBarColor={"#E56C6C"}
           />
         </div>

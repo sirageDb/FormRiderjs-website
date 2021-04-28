@@ -33,11 +33,17 @@ Form Rider can be used in single page app environments and also other environmen
 
   2. import it
   ```javascript 
-  import { FormRiderjs } from "formriderjs";
+  import FormRiderjs from "formriderjs";
   ```  
   
-  3. Form Rider should be loaded after the react/angular/vue component is mounted. e.g in a react environmenet, it works using class components or functional components as following : 
+  3. go to ``node-modules/formriderjs`` and take ``formRiderJsonConfig.json`` file from the folder tree and put somewhere else in your src folder(wherever you want) , but make sure to go back to ``node-modules/formriderjs/index.js`` and change 
 
+  ```javascript
+  //put in the require the path to formRiderJsonConfig.json
+  let jsonConfig = require("PATH TO THE /formRiderJsonConfig.json");
+  ```
+
+  4. Form Rider should be loaded after the react/angular/vue component is mounted. e.g in a react environmenet, it works using class components or functional components as following : 
 
   ```javascript
   // example of FormRiderjs() in a class component
@@ -53,7 +59,7 @@ Form Rider can be used in single page app environments and also other environmen
   }
   ```
 
-  4. Since FormRider should check the form before submitting, the submit method should be called only after validating the form because FormRider will return a vlaue to inform you if the validaion is ok or not, to do that lets create a method and call it validating(){} but you are free to call it what you want, inside this method we will call a FormRider function to inform us of the validation status, depending on this status the form will be submit or not.
+  5. Since FormRider should check the form before submitting, the submit method should be called only after validating the form because FormRider will return a vlaue to inform you if the validaion is ok or not, to do that lets create a method and call it validating(){} but you are free to call it what you want, inside this method we will call a FormRider function to inform us of the validation status, depending on this status the form will be submit or not.
 
 
   ```javascript
@@ -68,9 +74,8 @@ Form Rider can be used in single page app environments and also other environmen
 
 
 
-  5. A nice message should now apprear in the console notifying of the successful setup
-  6. Once FormRider setup is done, go next : [understanding configurations and main concepts](http://localhost:3000/docs/understanding-configurations-and-main-concepts)
+  6. A nice message should now apprear in the console notifying of the successful setup
 
 
-<br/>
+  7. Once FormRider setup is done, go next : [understanding configurations and main concepts](http://localhost:3000/docs/understanding-configurations-and-main-concepts)
 

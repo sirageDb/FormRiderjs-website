@@ -40,26 +40,39 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     cursor: pointer;
-    &.topBannerButton:first-child {
-        background-color: $green;
-        color: $whiteBright;
-        margin-right: 30px;
-        &:hover {
-            background-color: $blueViolet;
-        }
-    }
-    &.topBannerButton:last-child {
-        background-color: $whiteBright;
-        color: $blackDark;
-        &:hover {
-            background-color: $blueViolet;
-        }
-    }
     transition: 200ms;
     -webkit-transition: 200ms;
     -moz-transition: 200ms;
     -ms-transition: 200ms;
     -o-transition: 200ms;
+}
+
+.gettingStartedButton {
+    background-color: $green;
+    color: $whiteBright;
+    margin-right: 30px;
+    &:hover {
+        background-color: $blueViolet;
+    }
+}
+
+.downloadButton {
+    background-color: $whiteBright;
+    color: $blackDark;
+    &:hover {
+        background-color: $blueViolet;
+    }
+}
+
+.npmInstall {
+    background-color: $blackNoraml;
+    color: $whiteBright;
+    padding: 6.5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 // why using ======================================================================================

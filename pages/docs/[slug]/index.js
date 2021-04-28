@@ -62,7 +62,7 @@ function Docs({ data }) {
             <a
               className={styles.editPage}
               href={
-                "https://github.com/FormRiderjs/FormRiderjs-website/blob/main/content/" +
+                "https://github.com/sirageDb/FormRiderjs-website/tree/main/content/" +
                 `${slug}` +
                 ".md"
               }

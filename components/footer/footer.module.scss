@@ -1,16 +1,20 @@
 @import "../../styles/colors.scss";
 @import "../../styles/fontStyles.scss";
+.footerWrapper {}
+
 .footerContainer {
+    width: 1100px;
+    margin: auto;
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: $blueViolet;
     color: $whiteBright;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.footer {
-    width: 1100px;
-    height: 70px;
+.footerMainContent {
     margin: auto;
     display: flex;
     justify-content: center;
@@ -18,7 +22,7 @@
 }
 
 .brand {
-    width: 50px;
+    width: 60px;
     margin-right: 20px;
 }
 
