@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import styles from "./header.module.scss";
 
 export default function Header() {

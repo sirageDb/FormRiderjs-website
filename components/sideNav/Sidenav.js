@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import styles from "./sideNav.module.scss";
 
 
