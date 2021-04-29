@@ -370,9 +370,9 @@ function Footer() {
 // EXTERNAL MODULE: ./styles/globals.scss
 var globals = __webpack_require__("H/sG");
 
-// EXTERNAL MODULE: external "next/Head"
-var Head_ = __webpack_require__("ZOYG");
-var Head_default = /*#__PURE__*/__webpack_require__.n(Head_);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 
 // CONCATENATED MODULE: ./components/meta/Meta.js
 
@@ -383,7 +383,7 @@ function Meta({
   keywords,
   description
 }) {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Head_default.a, {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(head_default.a, {
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("meta", {
       name: "viewport",
       content: "width=device-width, initial-scale=1"
@@ -1191,13 +1191,6 @@ function getRouteRegex(normalizedRoute) {
     groups
   };
 }
-
-/***/ }),
-
-/***/ "ZOYG":
-/***/ (function(module, exports) {
-
-module.exports = require("next/Head");
 
 /***/ }),
 
@@ -3054,6 +3047,13 @@ function createObserver(options) {
 "use strict";
 exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
 //# sourceMappingURL=denormalize-page-path.js.map
+
+/***/ }),
+
+/***/ "xnum":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ })
 
