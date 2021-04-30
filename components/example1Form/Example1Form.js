@@ -1,8 +1,19 @@
 import styles from "./example1Form.module.scss";
+import FormRiderjs from "../../node_modules/formriderjs";
+
+import {useEffect} from 'react';
 
 export default function Example1Form() {
+
+
+
+  useEffect(() => {
+    new FormRiderjs();
+  })
+
+
   return (
-    <form className={styles.form}>
+    <form data-frform = {"example1"} className={styles.form}>
       <div className={styles.title}>
         A subscribe form live testing <span className={styles.greenCircle} />
       </div>
@@ -10,6 +21,7 @@ export default function Example1Form() {
       <div className={styles.formInputsContainer}>
         <div>
           <input
+            data-name = "username"
             className={styles.textInput}
             type={"text"}
             placeholder={"Username (required)"}
@@ -17,6 +29,8 @@ export default function Example1Form() {
         </div>
         <div>
           <input
+            data-name = "password"
+          
             className={styles.textInput}
             type={"text"}
             placeholder={"Password (required)"}

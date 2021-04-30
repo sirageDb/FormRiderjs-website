@@ -4,7 +4,10 @@ import SingleWhy from "../components/singleWhy/SingleWhy";
 import Example1Form from "../components/example1Form/Example1Form";
 import styles from "./index.module.scss";
 
+
+
 export default function Home() {
+
   return (
     <div>
       <div className={styles.topBannerContainer}>
@@ -107,7 +110,7 @@ export default function Home() {
             <span/>  <span className={styles.ponctuation}>{"}"}</span>,<br/>
             <span/>  <span className={styles.ponctuation}>{"{"}</span><br/>
             <span/>    <span className={styles.propertyKey}>"notificationCode"</span>: <span className={styles.propertyValueNotText}>2</span>,<br/>
-            <span/>    <span className={styles.propertyKey}>"text"</span>: <span className={styles.propertyValueText}>"Thank you for subscribing !"</span>,<br/>
+            <span/>    <span className={styles.propertyKey}>"text"</span>: <span className={styles.propertyValueText}>"Thank you for subscribing but this was only a test !"</span>,<br/>
             <span/>    <span className={styles.propertyKey}>"textColor"</span>: <span className={styles.propertyValueText}>"#ffffff"</span>,<br/>
             <span/>    <span className={styles.propertyKey}>"backgroundColor"</span>: <span className={styles.propertyValueText}>"#50CF96"</span><br/>
             <span/>  <span className={styles.ponctuation}>{"}]"}</span><br/>
