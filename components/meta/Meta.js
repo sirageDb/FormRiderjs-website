@@ -17,6 +17,6 @@ export default function Meta({ title, keywords, description }) {
 
 Meta.defaultProps = {
     title : "Form Rider, a javascript form validation plugin, based on JSON",
-    keywords : "Form, HTML forms, validation, plugin, javascript, sirage al dbiyat, open source, opensource, notification, library, plugin",
+    keywords : "Form, HTML forms, validation, plugin, javascript, sirage al dbiyat, open source, opensource, notification, plugin, plugin",
     description : "Validate HTML forms without typing other code than editing JSON and adding HTML attributes, with many validation functionalities such as required till regex and conditional validation"
 }

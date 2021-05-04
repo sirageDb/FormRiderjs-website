@@ -64,14 +64,14 @@ export default function Home() {
           <SingleWhy
             reason={"Maintained & Documented"}
             explanation={
-              "Form Rider documentation is constantly scanned and the library is continuously updated for better performance"
+              "Form Rider documentation is constantly scanned and the plugin is continuously updated for better performance"
             }
             reasonBarColor={"#FF512F"}
           />
           <SingleWhy
             reason={"Open Source"}
             explanation={
-              "Join the Discord channel, give new ideas or code it your self, feel free to add new notification designs to the library ! :)"
+              "Join the Discord channel, give new ideas or code it your self, feel free to add new notification designs to the plugin ! :)"
             }
             reasonBarColor={"#4D4D4D"}
           />
