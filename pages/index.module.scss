@@ -1,5 +1,6 @@
 @import "../styles/colors.scss";
 @import "../styles/fontStyles.scss";
+@import "../styles/mediaQueyrBreakPoints.scss";
 // TOP BANNER ======================================================================================
 .topBannerContainer {
     background-color: $blueViolet;
@@ -93,6 +94,10 @@
     }
 }
 
+.whyRowContainerSmallScreen {
+    display: none;
+}
+
 // Example 1 ======================================================================================
 .example1Container {
     display: flex;
@@ -169,4 +174,12 @@
 
 .ponctuation {
     color: $whiteDark
+}
+
+// Media queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media only screen and (max-width: $smallWidth) {
+    .whySectionContainer {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 }

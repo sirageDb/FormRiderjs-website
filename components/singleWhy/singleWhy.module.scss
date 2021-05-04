@@ -1,5 +1,6 @@
 @import "../../styles/colors.scss";
 @import "../../styles/fontStyles.scss";
+@import "../../styles/mediaQueyrBreakPoints.scss";
 .singleWhyContainer {
     color: $blackBright;
     width: 260px;
@@ -20,4 +21,12 @@
 .reasonBar {
     flex: auto;
     border-bottom: solid 4px;
+}
+
+// Media queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media only screen and (max-width: $smallWidth) {
+    .singleWhyContainer {
+        min-width: 240px;
+        margin-right: 20px;
+    }
 }
