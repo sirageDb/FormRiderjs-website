@@ -1,6 +1,7 @@
 @import "../../styles/fontStyles.scss";
 .socialNetworkingContainer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 10px;
+    justify-content: center;
 }

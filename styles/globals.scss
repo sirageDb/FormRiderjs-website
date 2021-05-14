@@ -1,5 +1,6 @@
 @import "./colors.scss";
 @import "./fontStyles.scss";
+@import "./mediaQueyrBreakPoints.scss";
 html,
 body {
     padding-top: 27px;
@@ -45,7 +46,13 @@ textarea {
 }
 
 .theMotherOfAllContainers {
-    padding-bottom: 200px;
+    padding-bottom: 250px;
+}
+
+@media only screen and (max-width: $smallWidth) {
+    .theMotherOfAllContainers {
+        padding-bottom: 300px;
+    }
 }
 
 //content styles==============================================================
@@ -69,3 +76,6 @@ hr {
     outline: none;
     border: none;
 }
+
+// Media queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: $smallWidth) {}

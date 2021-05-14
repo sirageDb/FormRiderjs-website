@@ -1,7 +1,8 @@
 @import "../../styles/colors.scss";
 @import "../../styles/fontStyles.scss";
+@import "../../styles/mediaQueyrBreakPoints.scss";
 .form {
-    width: 100;
+    max-width: 450px;
     background-color: $whiteDark;
     padding: 15px 30px;
     border-radius: 20px;
@@ -42,7 +43,7 @@
 .textInput {
     background-color: $whiteBright;
     padding: 3px 8px;
-    width: 300px;
+    width: 330px;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid $whiteBright;
@@ -84,5 +85,12 @@
         -moz-transition: background-color 200ms;
         -ms-transition: background-color 200ms;
         -o-transition: background-color 200ms;
+    }
+}
+
+// Media queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media only screen and (max-width: $smallWidth) {
+    .textInput {
+        width: 90%;
     }
 }

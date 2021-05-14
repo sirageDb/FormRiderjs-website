@@ -28,7 +28,7 @@ export default function Home() {
             </div>
             <div className={styles.topBannerButtonsContainer}>
               <Link href={"/docs/introduction"} ><div className={styles.topBannerButton + " " + styles.gettingStartedButton}>Get Started</div></Link>
-              <a href={"/FormRiderjs.zip"} download><div className={styles.topBannerButton + " " + styles.downloadButton}>Download</div></a> <span style={{ color: "#ffffff" }}>or</span> <span className={styles.npmInstall}><span style={{ color: "#FFAF26" }}>$</span> npm -i formriderjs</span>
+              <a href={"/FormRiderjs.zip"} download><div className={styles.topBannerButton + " " + styles.downloadButton}>Download</div></a> <span className={styles.specialWord}>or</span> <span className={styles.npmInstall}><span style={{ color: "#FFAF26" }}>$</span> npm -i formriderjs</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 @import "../../styles/colors.scss";
+@import "../../styles/mediaQueyrBreakPoints.scss";
 .buttonContainer {
     background-color: $whiteNormal;
     color: $blackDark;
@@ -21,4 +22,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px 1px 10px;
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: $smallWidth) {
+    .buttonContainer {
+        margin: 3px;
+    }
 }
