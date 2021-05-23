@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\n\nvar Notifications = function Notifications() {\n  return /*#__PURE__*/_jsx(\"div\", {\n    children: /*#__PURE__*/_jsx(\"h1\", {\n      children: \"this is notifciations page\"\n    })\n  });\n};\n\nexport default Notifications;","map":null,"metadata":{},"sourceType":"module"}
