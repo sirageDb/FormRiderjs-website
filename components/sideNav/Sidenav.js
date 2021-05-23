@@ -8,7 +8,6 @@ function SideNav(props) {
   const validatorsContainerRef = useRef();
   const listArrowRef = useRef();
   const [validatorsSectionOpened, setOpen] = useState(true);
-
   //currently opened docs
   let currentlyOpenedSlug = props.currentlyOpenedSlug;
 
@@ -45,177 +44,173 @@ function SideNav(props) {
 
   //when a section is opened we add a display block and add rotate the arrow, when closed we do the opposite
   function opneSection() {
-    let validatorsContainer = validatorsContainerRef.current;
-    let listArrow = listArrowRef.current;
-    console.log(listArrow);
+    const validatorsContainer = validatorsContainerRef.current;
+    const listArrow = listArrowRef.current;
     validatorsSectionOpened
-      ? ((validatorsContainer.style.display = "block"),
-        listArrow.classList.add(`${styles.listArrowRotated}`))
-      : ((validatorsContainer.style.display = "none"),
-        listArrow.classList.remove(`${styles.listArrowRotated}`));
+      ? ((validatorsContainer.style.display = "block"), listArrow.classList.add(`${styles.listArrowRotated}`))
+      : ((validatorsContainer.style.display = "none"), listArrow.classList.remove(`${styles.listArrowRotated}`));
     setOpen(!validatorsSectionOpened);
   }
 
   return (
-    <nav className={styles.sideNavContainer}>
-      <nav ref={sideNavRef} className={styles.sideNav}>
-        <Link href={`/docs/introduction`}>
-          <div idslug={"introduction"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Introduction</div>
+    <div>
+      <nav className={styles.sideNavContainer}>
+        <nav ref={sideNavRef} className={styles.sideNav}>
+          <Link href={`/docs/introduction`}>
+            <div idslug={"introduction"} className={styles.title}>
+              <div className={styles.titleContainer}>
+                <div>Introduction</div>
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
 
-        <Link href={`/docs/getting-started`}>
-          <div idslug={"getting-started"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Getting started</div>
+          <Link href={`/docs/getting-started`}>
+            <div idslug={"getting-started"} className={styles.title}>
+              <div className={styles.titleContainer}>
+                <div>Getting started</div>
+              </div>
             </div>
-          </div>
-        </Link>
-        
-        <Link href={`/docs/installation`}>
-          <div idslug={"installation"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Installation</div>
+          </Link>
+
+          <Link href={`/docs/installation`}>
+            <div idslug={"installation"} className={styles.title}>
+              <div className={styles.titleContainer}>
+                <div>Installation</div>
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
 
 
-        <Link href={`/docs/understanding-configurations-and-main-concepts`}>
-          <div
-            idslug={"understanding-configurations-and-main-concepts"}
-            className={styles.title}
-          >
-            <div className={styles.titleContainer}>
-              <div>Understanding configurations and main concepts</div>
+          <Link href={`/docs/understanding-configurations-and-main-concepts`}>
+            <div
+              idslug={"understanding-configurations-and-main-concepts"}
+              className={styles.title}
+            >
+              <div className={styles.titleContainer}>
+                <div>Understanding configurations and main concepts</div>
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
 
-        {/* ====================================================================================== */}
+          <div className={styles.titleWithSubTitles}>
+            <div onClick={opneSection} className={styles.supTitleContainer}>
+              <div className={styles.titleContainer}>
+                <div> Validators and functionalities</div>
+              </div>
+              <img
+                ref={listArrowRef}
+                className={styles.listArrowUnRotated}
+                alt="list arrow"
+                src={"/arrow.svg"}
+              />
+            </div>
+            <div
+              ref={validatorsContainerRef}
+              className={styles.subTitleContainer}
+            >
+              <Link href="/docs/required">
+                <div idslug={"required"} className={styles.subTitle}>
+                  required
+              </div>
+              </Link>
+              <Link href="/docs/email">
+                <div idslug={"email"} className={styles.subTitle}>
+                  email
+              </div>
+              </Link>
+              <Link href="/docs/minLength">
+                <div idslug={"minLength"} className={styles.subTitle}>
+                  minLength
+              </div>
+              </Link>
+              <Link href="/docs/maxLength">
+                <div idslug={"maxLength"} className={styles.subTitle}>
+                  maxLength
+              </div>
+              </Link>
+              <Link href="/docs/containNumber">
+                <div idslug={"containNumber"} className={styles.subTitle}>
+                  containNumber
+              </div>
+              </Link>
+              <Link href="/docs/numberBiggerThan">
+                <div idslug={"numberBiggerThan"} className={styles.subTitle}>
+                  numberBiggerThan
+              </div>
+              </Link>
+              <Link href="/docs/numberSmallerThan">
+                <div idslug={"numberSmallerThan"} className={styles.subTitle}>
+                  numberSmallerThan
+              </div>
+              </Link>
+              <Link href="/docs/containSpecialCharacters">
+                <div
+                  idslug={"containSpecialCharacters"}
+                  className={styles.subTitle}
+                >
+                  containSpecialCharacters
+              </div>
+              </Link>
+              <Link href="/docs/containWhiteSpace">
+                <div idslug={"containWhiteSpace"} className={styles.subTitle}>
+                  containWhiteSpace
+              </div>
+              </Link>
+              <Link href="/docs/containCapitalLetters">
+                <div idslug={"containCapitalLetters"} className={styles.subTitle}>
+                  containCapitalLetters
+              </div>
+              </Link>
+              <Link href="/docs/containSmallLetters">
+                <div idslug={"containSmallLetters"} className={styles.subTitle}>
+                  containSmallLetters
+              </div>
+              </Link>
+              <Link href="/docs/dateFormat">
+                <div idslug={"dateFormat"} className={styles.subTitle}>
+                  dateFormat
+              </div>
+              </Link>
+              <Link href="/docs/regexTest">
+                <div idslug={"regexTest"} className={styles.subTitle}>
+                  regexTest
+              </div>
+              </Link>
+              <Link href="/docs/checkboxRequired">
+                <div idslug={"checkboxRequired"} className={styles.subTitle}>
+                  checkboxRequired
+              </div>
+              </Link>
+              <Link href="/docs/radioRequired">
+                <div idslug={"radioRequired"} className={styles.subTitle}>
+                  radioRequired
+              </div>
+              </Link>
+              <Link href="/docs/conditionalRequired">
+                <div idslug={"conditionalRequired"} className={styles.subTitle}>
+                  conditionalRequired
+              </div>
+              </Link>
+            </div>
+          </div>
 
-        <div className={styles.titleWithSubTitles}>
-          <div onClick={opneSection} className={styles.supTitleContainer}>
-            <div className={styles.titleContainer}>
-              <div> Validators and functionalities</div>
+          <Link href={`/docs/notifications`}>
+            <div idslug={"notifications"} className={styles.title}>
+              <div className={styles.titleContainer}>
+                <div>Notifications</div>
+              </div>
             </div>
-            <img
-              ref={listArrowRef}
-              className={styles.listArrowUnRotated}
-              alt="list arrow"
-              src={"/arrow.svg"}
-            />
-          </div>
-          <div
-            ref={validatorsContainerRef}
-            className={styles.subTitleContainer}
-          >
-            <Link href="/docs/required">
-              <div idslug={"required"} className={styles.subTitle}>
-                required
+          </Link>
+          <Link href={`/docs/understanding-error-messages`}>
+            <div idslug={"understanding-error-messages"} className={styles.title}>
+              <div className={styles.titleContainer}>
+                <div>Understanding error messages</div>
               </div>
-            </Link>
-            <Link href="/docs/email">
-              <div idslug={"email"} className={styles.subTitle}>
-                email
-              </div>
-            </Link>
-            <Link href="/docs/minLength">
-              <div idslug={"minLength"} className={styles.subTitle}>
-                minLength
-              </div>
-            </Link>
-            <Link href="/docs/maxLength">
-              <div idslug={"maxLength"} className={styles.subTitle}>
-                maxLength
-              </div>
-            </Link>
-            <Link href="/docs/containNumber">
-              <div idslug={"containNumber"} className={styles.subTitle}>
-                containNumber
-              </div>
-            </Link>
-            <Link href="/docs/numberBiggerThan">
-              <div idslug={"numberBiggerThan"} className={styles.subTitle}>
-                numberBiggerThan
-              </div>
-            </Link>
-            <Link href="/docs/numberSmallerThan">
-              <div idslug={"numberSmallerThan"} className={styles.subTitle}>
-                numberSmallerThan
-              </div>
-            </Link>
-            <Link href="/docs/containSpecialCharacters">
-              <div
-                idslug={"containSpecialCharacters"}
-                className={styles.subTitle}
-              >
-                containSpecialCharacters
-              </div>
-            </Link>
-            <Link href="/docs/containWhiteSpace">
-              <div idslug={"containWhiteSpace"} className={styles.subTitle}>
-                containWhiteSpace
-              </div>
-            </Link>
-            <Link href="/docs/containCapitalLetters">
-              <div idslug={"containCapitalLetters"} className={styles.subTitle}>
-                containCapitalLetters
-              </div>
-            </Link>
-            <Link href="/docs/containSmallLetters">
-              <div idslug={"containSmallLetters"} className={styles.subTitle}>
-                containSmallLetters
-              </div>
-            </Link>
-            <Link href="/docs/dateFormat">
-              <div idslug={"dateFormat"} className={styles.subTitle}>
-                dateFormat
-              </div>
-            </Link>
-            <Link href="/docs/regexTest">
-              <div idslug={"regexTest"} className={styles.subTitle}>
-                regexTest
-              </div>
-            </Link>
-            <Link href="/docs/checkboxRequired">
-              <div idslug={"checkboxRequired"} className={styles.subTitle}>
-                checkboxRequired
-              </div>
-            </Link>
-            <Link href="/docs/radioRequired">
-              <div idslug={"radioRequired"} className={styles.subTitle}>
-                radioRequired
-              </div>
-            </Link>
-            <Link href="/docs/conditionalRequired">
-              <div idslug={"conditionalRequired"} className={styles.subTitle}>
-                conditionalRequired
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        {/* ====================================================================================== */}
-        <Link href={`/docs/notifications`}>
-          <div idslug={"notifications"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Notifications</div>
             </div>
-          </div>
-        </Link>
-        <Link href={`/docs/understanding-error-messages`}>
-          <div idslug={"understanding-error-messages"} className={styles.title}>
-            <div className={styles.titleContainer}>
-              <div>Understanding error messages</div>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        </nav>
       </nav>
-    </nav>
+    </div>
   );
 }
 

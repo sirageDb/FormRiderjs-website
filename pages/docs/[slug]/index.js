@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import styles from "../../../pages/docs.module.scss";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { useEffect, useRef, useState } from "react";
 
 function Docs({ data }) {
   //extracting real data from data using gray-matter package
@@ -39,9 +40,24 @@ function Docs({ data }) {
     },
   };
 
+
+
+  const burgerIconRef = useRef(null);
+  const [burgerIconOpened, setOpenBurgerIcon] = useState(true);
+  const toggleSideNav = () => {
+    burgerIconOpened
+      ? burgerIconRef.current.src = "/burgerIconClosed.svg"
+      : burgerIconRef.current.src = "/burgerIconOpened.svg";
+    setOpenBurgerIcon(!burgerIconOpened);
+  }
+
+
   return (
     <div>
-      <SideNav docs={docs} currentlyOpenedSlug={slug} />
+      <SideNav docs={docs} currentlyOpenedSlug={slug} isOpened={false} />
+      <div onClick={toggleSideNav} className={styles.sideNavButton}>
+        <img ref={burgerIconRef} className={styles.burgerIcon} src={"/burgerIconOpened.svg"} />
+      </div>
       <div className={styles.pageLayout}>
         <main className={styles.mainLayout}>
           <div className={styles.titleContainer}>
@@ -77,6 +93,8 @@ function Docs({ data }) {
             </a>
           </div>
         </main>
+      </div>
+      <div >
       </div>
     </div>
   );

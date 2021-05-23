@@ -1,5 +1,6 @@
 @import "../styles/colors.scss";
 @import "../styles/fontStyles.scss";
+@import "../styles/mediaQueyrBreakPoints.scss";
 .pageLayout {
     margin-left: 200px;
     padding-top: 40px;
@@ -51,4 +52,49 @@
 .editPageIcon {
     width: 20px;
     margin-left: 5px;
+}
+
+.sideNavButton {
+    display: none;
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: $smallWidth) {
+    .pageLayout {
+        margin-left: 0;
+        margin: auto;
+        width: $layoutWidthSmall;
+        padding-top: 0;
+    }
+    .sideNavButton {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        top: 75%;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: $blackDark;
+        cursor: pointer;
+        box-shadow: $blackBright 0 0 8px 0px;
+    }
+    .burgerIcon {
+        max-width: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+    .burgerIconHidden {
+        display: none;
+    }
 }

@@ -1,6 +1,8 @@
 @import "../../styles/colors.scss";
 @import "../../styles/fontStyles.scss";
+@import "../../styles/mediaQueyrBreakPoints.scss";
 .sideNavContainer {
+    display: block;
     position: fixed;
     top: 54px;
     left: 0;
@@ -26,6 +28,10 @@
         color: none;
         background: none;
     }
+}
+
+.sideNavContainerSmallScreen {
+    display: none;
 }
 
 .sideNav {
@@ -133,4 +139,9 @@
     -o-transform: rotate(180deg);
 }
 
-//=====================+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: $smallWidth) {
+    .sideNavContainer {
+        display: none;
+    }
+}
