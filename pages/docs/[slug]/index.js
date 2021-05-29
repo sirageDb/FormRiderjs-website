@@ -42,19 +42,22 @@ function Docs({ data }) {
 
 
 
+  //TODO if sidenav is closed in a smallscreen, then switched to a big screen => sidenav will stay closed unless back to small screen to switch the state
   const burgerIconRef = useRef(null);
   const [burgerIconOpened, setOpenBurgerIcon] = useState(true);
+  const [isOpenedSideNav, setIsOpenedSideNav] = useState(false);
   const toggleSideNav = () => {
     burgerIconOpened
       ? burgerIconRef.current.src = "/burgerIconClosed.svg"
       : burgerIconRef.current.src = "/burgerIconOpened.svg";
     setOpenBurgerIcon(!burgerIconOpened);
+    setIsOpenedSideNav(!isOpenedSideNav)
   }
 
 
   return (
     <div>
-      <SideNav docs={docs} currentlyOpenedSlug={slug} isOpened={false} />
+      <SideNav docs={docs} currentlyOpenedSlug={slug} isOpened={isOpenedSideNav} />
       <div onClick={toggleSideNav} className={styles.sideNavButton}>
         <img ref={burgerIconRef} className={styles.burgerIcon} src={"/burgerIconOpened.svg"} />
       </div>

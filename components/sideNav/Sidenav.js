@@ -4,6 +4,8 @@ import styles from "./sideNav.module.scss";
 
 
 function SideNav(props) {
+  const isOpened = props.isOpened;
+  console.log(isOpened);
   const sideNavRef = useRef();
   const validatorsContainerRef = useRef();
   const listArrowRef = useRef();
@@ -52,8 +54,9 @@ function SideNav(props) {
     setOpen(!validatorsSectionOpened);
   }
 
+
   return (
-    <div>
+    <div style={{display : isOpened ? "block" : "none"}}>
       <nav className={styles.sideNavContainer}>
         <nav ref={sideNavRef} className={styles.sideNav}>
           <Link href={`/docs/introduction`}>
