@@ -41,18 +41,28 @@ function Docs({ data }) {
   };
 
 
+  useEffect(() => {
+
+    if (window.screen.width > 481) {
+      isOpenedBurgerIcon ? setOpenBurgerIcon(!isOpenedBurgerIcon) : setOpenBurgerIcon(!isOpenedBurgerIcon)
+      isOpenedSideNav ? setIsOpenedSideNav(!isOpenedSideNav) : setIsOpenedSideNav(!isOpenedSideNav);
+    }
+  },[]);
+
 
   //TODO if sidenav is closed in a smallscreen, then switched to a big screen => sidenav will stay closed unless back to small screen to switch the state
   const burgerIconRef = useRef(null);
-  const [burgerIconOpened, setOpenBurgerIcon] = useState(true);
+  const [isOpenedBurgerIcon, setOpenBurgerIcon] = useState(true);
   const [isOpenedSideNav, setIsOpenedSideNav] = useState(false);
   const toggleSideNav = () => {
-    burgerIconOpened
+    isOpenedBurgerIcon
       ? burgerIconRef.current.src = "/burgerIconClosed.svg"
       : burgerIconRef.current.src = "/burgerIconOpened.svg";
-    setOpenBurgerIcon(!burgerIconOpened);
-    setIsOpenedSideNav(!isOpenedSideNav)
+    setOpenBurgerIcon(!isOpenedBurgerIcon);
+    setIsOpenedSideNav(!isOpenedSideNav);
   }
+
+
 
 
   return (

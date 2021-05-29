@@ -5,7 +5,6 @@ import styles from "./sideNav.module.scss";
 
 function SideNav(props) {
   const isOpened = props.isOpened;
-  console.log(isOpened);
   const sideNavRef = useRef();
   const validatorsContainerRef = useRef();
   const listArrowRef = useRef();
@@ -53,7 +52,6 @@ function SideNav(props) {
       : ((validatorsContainer.style.display = "none"), listArrow.classList.remove(`${styles.listArrowRotated}`));
     setOpen(!validatorsSectionOpened);
   }
-
 
   return (
     <div style={{display : isOpened ? "block" : "none"}}>
