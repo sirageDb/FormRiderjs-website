@@ -6,6 +6,8 @@ import styles from "../../../pages/docs.module.scss";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { useEffect, useRef, useState } from "react";
+import Meta from "../../../components/meta/Meta";
+
 
 function Docs({ data }) {
   //extracting real data from data using gray-matter package
@@ -47,7 +49,7 @@ function Docs({ data }) {
       isOpenedBurgerIcon ? setOpenBurgerIcon(!isOpenedBurgerIcon) : setOpenBurgerIcon(!isOpenedBurgerIcon)
       isOpenedSideNav ? setIsOpenedSideNav(!isOpenedSideNav) : setIsOpenedSideNav(!isOpenedSideNav);
     }
-  },[]);
+  }, []);
 
 
   //TODO if sidenav is closed in a smallscreen, then switched to a big screen => sidenav will stay closed unless back to small screen to switch the state
@@ -67,6 +69,11 @@ function Docs({ data }) {
 
   return (
     <div>
+      <Meta
+        title={"FormRider.js " + docsToBeShown.data.title}
+        description={docsToBeShown.data.titleExplained}
+        keywords={"FormRider.js, Sirage, AL, dbiyat, javascript, form, validation, library, iLoveSemicolons, digitalmine.dev, digital, mine, i, ilove, semicolons"}
+      />
       <SideNav docs={docs} currentlyOpenedSlug={slug} isOpened={isOpenedSideNav} />
       <div onClick={toggleSideNav} className={styles.sideNavButton}>
         <img ref={burgerIconRef} className={styles.burgerIcon} src={"/burgerIconOpened.svg"} />

@@ -3,13 +3,18 @@ import LayoutStandard from "../components/layoutStandard/LayoutStandard";
 import SingleWhy from "../components/singleWhy/SingleWhy";
 import Example1Form from "../components/example1Form/Example1Form";
 import styles from "./index.module.scss";
-
+import Meta from "../components/meta/Meta.js";
 
 
 export default function Home() {
 
   return (
     <div>
+    <Meta
+    title={"FormRider.js, a javascript form validation plugin, based on JSON"}
+    keywords={"FormRider.js, Sirage, AL, dbiyat, javascript, form, validation, library, iLoveSemicolons, digitalmine.dev, digital, mine, i, ilove, semicolons"}
+    description={"A javascript form validation and notification plugin based on json and coded in Vanilla javascript, made with love for the community by Sirage AL DBIYAT"}
+     />
       <div className={styles.topBannerContainer}>
         <div className={styles.topBanner}>
           <div>

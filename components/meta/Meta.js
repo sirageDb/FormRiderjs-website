@@ -1,22 +1,33 @@
 import Head from "next/head";
 
-export default function Meta({ title, keywords, description }) {
-  return (
-    <Head>
-      <meta name={"viewport"} content={"width=device-width, initial-scale=1"}/>
-      <meta name={"keywords"} content={keywords} />
-      <meta name={"description"} content={description} />
-      <meta charSet={'utf-8'}/>
-      <link rel='icon' href='/favicon.ico'/>
-      <title>{title}</title>
-    </Head>
-  );
+export default function Meta({ title, description, keywords }) {
+
+    return (
+        <Head>
+            {/* GOOGLE */}
+            <title>{title}</title>
+            <meta charSet={'utf-8'} />
+            <link rel='icon' href='/favicon.ico' />
+            <meta name="description" content={description} />
+            <meta name="keywords" content={keywords} />
+            <meta name="robots" content="index,follow" />
+            //==============================================================
+            {/* Social media */}
+            <meta property="og:title" content={title}/>
+            <meta property="og:description" content={description} />
+            <meta property="og:type" content="Website" />
+            <meta property="og:locale" content="en_GB" />
+            <meta name="author" content="Sirage Al dbiyat" />
+            <meta name="copyright" content="Sirage Al dbiyat" />
+            //==============================================================
+
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@iLoveSemicolon" />
+            <meta name="twitter:creator" content="@iLoveSemicolon" />
+            <meta property="og:url" content="https://formriderjs.ilovesemicolons.io" />
+        </Head>
+    )
 }
 
 
-
-Meta.defaultProps = {
-    title : "Form Rider, a javascript form validation plugin, based on JSON",
-    keywords : "Form, HTML forms, validation, plugin, javascript, sirage al dbiyat, open source, opensource, notification, plugin, plugin",
-    description : "Validate HTML forms without typing other code than editing JSON and adding HTML attributes, with many validation functionalities such as required till regex and conditional validation"
-}

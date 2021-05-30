@@ -7,7 +7,7 @@ import Meta from "../components/meta/Meta";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Meta />
+    {/* <Meta /> */}
     <div className={"theMotherOfAllContainers"}>
       <Header />
       {/* <FundingBanner /> */}
