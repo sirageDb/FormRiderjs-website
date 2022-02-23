@@ -373,10 +373,10 @@ function SocialNetworkingContainer() {
       text: "sirageDb"
     }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(SocialNetworkingButton, {
       className: socialNetworkingContainer_module_default.a.singleNetworkingButton,
-      goTo: "https://ilovesemicolons.io",
+      goTo: "https://semicolons.dev",
       src: "/website.svg",
       alt: "sirage al dbiyta website developer",
-      text: "ilovesemicolons.io"
+      text: "semicolons.dev"
     })]
   });
 }
@@ -404,7 +404,7 @@ function Footer() {
         }), " for the community by Sirage AL DBIYAT (", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
           href: "https://semicolons.dev",
           className: footer_module_default.a.linkToiLoveSemicolons,
-          children: "iLoveSemicolons"
+          children: "semicolons.dev"
         }), ")", /*#__PURE__*/Object(jsx_runtime_["jsx"])(SocialNetworkingContainer, {})]
       })]
     })

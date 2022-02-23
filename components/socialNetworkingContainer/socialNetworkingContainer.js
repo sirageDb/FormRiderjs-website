@@ -29,10 +29,10 @@ export default function SocialNetworkingContainer() {
                 text="sirageDb"
             />
             <SocialNetworkingButton className={Styles.singleNetworkingButton}
-                goTo={"https://ilovesemicolons.io"}
+                goTo={"https://semicolons.dev"}
                 src={"/website.svg"}
                 alt={"sirage al dbiyta website developer"}
-                text="ilovesemicolons.io"
+                text="semicolons.dev"
             />
         </div>
     );
