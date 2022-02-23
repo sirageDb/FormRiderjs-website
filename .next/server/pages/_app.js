@@ -402,7 +402,7 @@ function Footer() {
           className: footer_module_default.a.love,
           src: "/like.png"
         }), " for the community by Sirage AL DBIYAT (", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-          href: "https://ilovesemicolons.io",
+          href: "https://semicolons.dev",
           className: footer_module_default.a.linkToiLoveSemicolons,
           children: "iLoveSemicolons"
         }), ")", /*#__PURE__*/Object(jsx_runtime_["jsx"])(SocialNetworkingContainer, {})]
